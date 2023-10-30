@@ -21,11 +21,11 @@ Make sure you have the following software installed before running the tests:
 1. Clone this repository to your local machine.
 
 ```shell
-git clone https://github.com/yourusername/opencart-testing.git
+git clone (https://github.com/TayadeAjay/OpenCart_Framework.git)
 Navigate to the project directory.
 shell
 Copy code
-cd opencart-testing
+cd OpenCart_Framework.git
 Configure the web driver path and other settings in the src/test/resources/config.properties file.
 
 Run the tests using Maven.
@@ -62,6 +62,6 @@ License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Contact
-For any questions or suggestions, please contact Your Name.
+For any questions or suggestions, please contact Ajaytayade759@gmail.com
 
 Happy Testing!
