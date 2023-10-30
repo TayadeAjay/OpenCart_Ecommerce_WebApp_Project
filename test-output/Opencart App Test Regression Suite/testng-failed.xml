@@ -17,20 +17,4 @@
       </class> <!-- com.qa.opencart.test.LoginPageTest -->
     </classes>
   </test> <!-- Login Page Test(failed) -->
-  <test thread-count="4" parallel="tests" name="Account Page Test(failed)" verbose="4">
-    <classes>
-      <class name="com.qa.opencart.test.AccountsPageTest">
-        <methods>
-          <include name="isLogoutLinkExistTest"/>
-          <include name="accHeadersValueTest"/>
-          <include name="setup"/>
-          <include name="accHeadersCountTest"/>
-          <include name="accPageTitleTest"/>
-          <include name="accPageUrlTest"/>
-          <include name="accPageSetup"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.qa.opencart.test.AccountsPageTest -->
-    </classes>
-  </test> <!-- Account Page Test(failed) -->
 </suite> <!-- Failed suite [Opencart App Test Regression Suite] -->

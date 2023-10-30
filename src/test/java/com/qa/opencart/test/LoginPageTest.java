@@ -21,7 +21,7 @@ import io.qameta.allure.Story;
 public class LoginPageTest extends BaseTest {
 	
 	@Severity(SeverityLevel.TRIVIAL)
-	@Description("....checking the title of the page.... tester: Monika")
+	@Description("....checking the title of the page.... tester: Ajay")
 	@Test(priority=1)
 	public void loginPageTitleTest()
 	{
@@ -30,7 +30,7 @@ public class LoginPageTest extends BaseTest {
 	}
 	
 	@Severity(SeverityLevel.NORMAL)
-	@Description("....checking the url of the page.... tester: Monika")
+	@Description("....checking the url of the page.... tester: Ajay")
 	@Test(priority=2)
 	public void loginPageUrlTest()
 	{
@@ -40,7 +40,7 @@ public class LoginPageTest extends BaseTest {
 	
 
 	@Severity(SeverityLevel.CRITICAL)
-	@Description("....checking forgot pwd link exist.... tester: Monika")
+	@Description("....checking forgot pwd link exist.... tester: Ajay")
 	@Test(priority=3)
 	public void forgotPwdLinkTest()
 	{
