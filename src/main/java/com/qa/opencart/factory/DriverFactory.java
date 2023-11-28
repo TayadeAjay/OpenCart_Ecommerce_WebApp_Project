@@ -23,34 +23,34 @@ public class DriverFactory {
 	public Properties prop;
 	public OptionsManager optionsManager;
 	public static String highlight;
-	public static ThreadLocal<WebDriver> tlDriver=new ThreadLocal<WebDriver>();
-	
+	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
+
 	/**
 	 * this method is initializing the driver on the basis of given browser name
+	 * 
 	 * @param browserName
 	 * @return this return the driver
 	 */
-	public WebDriver initDriver(Properties prop)
-	{
-		optionsManager=new OptionsManager(prop);
-		highlight=prop.getProperty("highlight").trim();
-		String browserName=prop.getProperty("browser").toLowerCase().trim();  
-		//if there is spaces after value in properties file,then use trim
-		System.out.println("Browser name is:"+browserName);
-		if(browserName.equalsIgnoreCase("chrome")){			
-			//driver=new ChromeDriver(optionsManager.getChromeOptions());
+	public WebDriver initDriver(Properties prop) {
+		optionsManager = new OptionsManager(prop);
+		highlight = prop.getProperty("highlight").trim();
+		String browserName = prop.getProperty("browser").toLowerCase().trim();
+		// if there is spaces after value in properties file,then use trim
+		System.out.println("Browser name is:" + browserName);
+		if (browserName.equalsIgnoreCase("chrome")) {
+			// driver=new ChromeDriver(optionsManager.getChromeOptions());
 			tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
-		}else if(browserName.trim().equalsIgnoreCase("firefox")){
-			//driver=new FirefoxDriver(optionsManager.getFirefoxOptions());
+		} else if (browserName.trim().equalsIgnoreCase("firefox")) {
+			// driver=new FirefoxDriver(optionsManager.getFirefoxOptions());
 			tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
-		}else if(browserName.trim().equalsIgnoreCase("safari")){
-			//driver=new SafariDriver();
+		} else if (browserName.trim().equalsIgnoreCase("safari")) {
+			// driver=new SafariDriver();
 			tlDriver.set(new SafariDriver());
-		}else if(browserName.trim().equalsIgnoreCase("edge")){
-			//driver=new EdgeDriver(optionsManager.getEdgeOptions());
+		} else if (browserName.trim().equalsIgnoreCase("edge")) {
+			// driver=new EdgeDriver(optionsManager.getEdgeOptions());
 			tlDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
-		}else{
-			System.out.println("Please pass the right browser"+browserName);
+		} else {
+			System.out.println("Please pass the right browser" + browserName);
 			throw new FrameworkException("NO BROWSER FOUND EXCEPTION...");
 		}
 		getDriver().manage().deleteAllCookies();
@@ -58,16 +58,16 @@ public class DriverFactory {
 		getDriver().get(prop.getProperty("url"));
 		return getDriver();
 	}
-	
+
 	/**
-	 * getDriver():get the local thread copy of the driver
-	 * synchronized:every thread will get their own individual copy,will never get any deadlock
+	 * getDriver():get the local thread copy of the driver synchronized:every thread
+	 * will get their own individual copy,will never get any deadlock
 	 */
-	
+
 	public synchronized static WebDriver getDriver() {
 		return tlDriver.get();
 	}
-	
+
 	/**
 	 * this method is reading the properties from the .properties file
 	 * 
@@ -104,7 +104,7 @@ public class DriverFactory {
 				default:
 					System.out.println("....Wrong env is passed....No need to run the test cases....");
 					throw new FrameworkException("WRONG ENV IS PASSED...");
-				
+
 				}
 
 			}
@@ -121,7 +121,6 @@ public class DriverFactory {
 		return prop;
 	}
 
-	
 	/**
 	 * take screenshot
 	 */
