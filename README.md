@@ -1,4 +1,4 @@
-# OpenCart_Framework
+# OpenCart_Ecommerce_WebApp_Project
 
 
 This repository contains a Java-based automated testing project for OpenCart using Selenium, TestNG, and a Page Object Model (POM) design. It also integrates Allure and Extent Reports for comprehensive test reporting.
@@ -21,7 +21,7 @@ Make sure you have the following software installed before running the tests:
 1. Clone this repository to your local machine.
 
 ```shell
-git clone (https://github.com/TayadeAjay/OpenCart_Framework.git)
+git clone (https://github.com/TayadeAjay/OpenCart_Ecommerce_WebApp_Project.git)
 Navigate to the project directory.
 shell
 Copy code
